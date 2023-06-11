@@ -14,7 +14,7 @@ def generate_address(public_key):
     return base58.b58encode_check(b'\x00' + ripemd160_hash).decode()  # Encoding to Base58 address
 
 # Read the input file containing public keys
-file_path = 'public_keys.txt'
+file_path = 'public-keys.txt'
 
 with open(file_path, 'r') as file:
     public_keys = file.readlines()
